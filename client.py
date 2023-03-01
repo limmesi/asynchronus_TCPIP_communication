@@ -10,8 +10,8 @@ print(f"Connected by {HOST}:{PORT}")
 # data = s.recv(1024)
 # print(f"Received: {data!r}")
 while True:
-    message = input("me: ")
-    if message == '/quit':
+    message = input("> ")
+    if message == '/q':
         break
     s.sendall(message.encode())
     data = s.recv(1024)
