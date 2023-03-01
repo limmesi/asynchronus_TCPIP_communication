@@ -1,6 +1,7 @@
 import asyncio
 from aioconsole import ainput
 
+
 class ClientOnServer:
     last_id = 1
 
