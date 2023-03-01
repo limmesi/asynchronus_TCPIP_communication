@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/venvv" />
       <excludeFolder url="file://$MODULE_DIR$/venvvv" />
+      <excludeFolder url="file://$MODULE_DIR$/c" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

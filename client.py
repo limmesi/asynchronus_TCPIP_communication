@@ -1,20 +1,10 @@
-import socket
+import asyncio
+from my_classes import Client
 
-HOST = "127.0.0.1"  # The server's hostname or IP address
-PORT = 65432  # The port used by the server
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 65432
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-s.connect((HOST, PORT))
-print(f"Connected by {HOST}:{PORT}")
-# data = s.recv(1024)
-# print(f"Received: {data!r}")
-while True:
-    message = input("> ")
-    if message == '/q':
-        break
-    s.sendall(message.encode())
-    data = s.recv(1024)
-    print("somebody: ", data.decode())
-
-s.close()
+if __name__ == "__main__":
+    loop = asyncio.get_event_loop()
+    client = Client(SERVER_IP, SERVER_PORT, loop)
+    asyncio.run(client.connect_to_server())

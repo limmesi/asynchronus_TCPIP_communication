@@ -1,11 +1,9 @@
-import socket
 import asyncio
-
-SERVER_IP = ""  # Standard loopback interface address (localhost)
-SERVER_PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
+from my_classes import Server
 
 
-
+SERVER_IP = "127.0.0.1"
+SERVER_PORT = 65432
 
 if __name__ == "__main__":
     as_loop = asyncio.get_event_loop()
